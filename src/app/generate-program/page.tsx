@@ -19,6 +19,7 @@ const GenerateProgramPage = () => {
 
   const messageContainerRef = useRef<HTMLDivElement>(null)
 
+  /*
   useEffect(() => {
     const originalError = console.error;
     // override console.error to ignore "Meeting has ended" errors
@@ -37,6 +38,32 @@ const GenerateProgramPage = () => {
         console.error = originalError;
       };
     }, []});
+    */
+    useEffect(() => {
+      const originalError = console.error;
+    
+      console.error = (...args: any[]) => {
+        const msg = args[0];
+    
+        const isMeetingEnded =
+          (typeof msg === "string" && msg.includes("Meeting has ended")) ||
+          (args[0] && args[0].toString?.().includes("Meeting has ended"));
+    
+        if (isMeetingEnded) {
+          // optionally log once, or just silently ignore
+          // console.log("Ignoring known error: Meeting has ended");
+          return;
+        }
+    
+        return originalError(...args);
+      };
+    
+      // cleanup inside useEffect
+      return () => {
+        console.error = originalError;
+      };
+    }, []);
+    
   
   // auto-scroll messages
   useEffect(() => {
