@@ -4,7 +4,7 @@ An AI-powered fitness coaching platform that generates fully personalized workou
 
 The platform enforces strict data schemas to ensure consistency, reliability, and safety of AI-generated plans, making the output production-ready and easy to integrate into frontend and analytics systems. This application has been tested and valued by hundreds of users, helping them follow structured, goal-driven fitness and nutrition routines without the cost of a personal trainer.
 
-##Technical Implementation
+**Technical Implementation**
 
 The application is built using TypeScript/JavaScript with a modern full-stack architecture. User inputs such as age, height, weight, injuries, dietary restrictions, workout frequency, fitness level, and goals are collected on the frontend and securely processed on the backend.
 
@@ -12,18 +12,18 @@ On the backend, I engineered prompt-driven AI workflows using a large language m
 
 The workout generation logic intelligently avoids muscle overuse by applying split-based training logic, while the nutrition engine calculates daily calorie targets and produces balanced meals that respect dietary constraints. Additional validation layers ensure schema correctness even when the AI output deviates from expectations.
 
-##Tech Stack:
+## Tech Stack
 
-Frontend: React / Next.js, Tailwind CSS  
-Backend: TypeScript, REST APIs  
-AI Integration: Google Gemini / LLM API (prompt-engineered with strict schema enforcement)  
-AI Orchestration & Voice: Vapi (assistant workflows, API requests, voice interaction)  
-Database & Logic: Convex (real-time database, queries, mutations, user-aware logic)  
-Validation: Custom JSON schema validation & runtime safety checks  
-Authentication: Clerk (user-aware personalization)  
-Deployment & Infrastructure: Deployed on Vercel using serverless API routes with automatic scaling
+**Frontend:** React / Next.js, Tailwind CSS  
+**Backend:** TypeScript, REST APIs  
+**AI Integration:** Google Gemini / LLM API (prompt-engineered with strict schema enforcement)  
+**AI Orchestration & Voice:** Vapi (assistant workflows, API requests, voice interaction)  
+**Database & Logic:** Convex (real-time database, queries, mutations, user-aware logic)  
+**Validation:** Custom JSON schema validation & runtime safety checks  
+**Authentication:** Clerk (user-aware personalization)  
+**Deployment & Infrastructure:** Deployed on Vercel using serverless API routes with automatic scaling
 
-First, run the development server:
+## Running Application
 
 ```bash
 npm run dev
@@ -37,7 +37,7 @@ bun dev
 
 Open (http://localhost:3000) with your browser to see the result.
 
-## Database Convex
+## Running Database
 
 Run the server:
 
