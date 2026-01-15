@@ -15,7 +15,7 @@ The workout generation logic intelligently avoids muscle overuse by applying spl
 ##Tech Stack:
 
 Frontend: React / Next.js, Tailwind CSS  
-Backend: Node.js, TypeScript, REST APIs  
+Backend: TypeScript, REST APIs  
 AI Integration: Google Gemini / LLM API (prompt-engineered with strict schema enforcement)  
 AI Orchestration & Voice: Vapi (assistant workflows, API requests, voice interaction)  
 Database & Logic: Convex (real-time database, queries, mutations, user-aware logic)  
